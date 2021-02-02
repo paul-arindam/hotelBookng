@@ -1,0 +1,49 @@
+
+#showcase{
+    border-bottom: 3px solid #e8491d;
+}
+
+.hero{
+    min-height:400px;
+}
+
+.icon{
+    position: absolute;
+    top: 428px;
+    left: 45%;
+    background: red;
+    height: 100px;
+    width: 100px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 7px #5e5e5e;
+    z-index: 6;
+}
+
+p{
+    display: inline-block;
+}
+
+.formcontent{
+    padding-top: 30px;
+}
+
+.book{
+    position: relative;
+    margin: auto;
+    width: 50%;
+    border: 2px solid #e8491d;
+    padding: 20px;
+    box-shadow: 7px 7px 9px #888888;
+}
+
+.btnwrapper{
+    text-align: center;
+}
+
+input[type="text"],input[type="number"],input[type="date"],input[type="email"]{
+    padding:5px;
+}
+
+input[type="text"]:focus,input[type="number"]:focus,input[type="date"]:focus,input[type="email"]:focus{
+    border: 2px solid rgb(174, 176, 202);
+}

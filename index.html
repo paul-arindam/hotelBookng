@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Book Hotels | Welcome</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/loginForm.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1><span class="highlight">Hotel</span> Booking</h1>
+        </div>
+        <nav>
+          <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="showcase">
+      <div class="container">
+        <h1 style="text-shadow: 3px 3px rgb(51, 51, 51);">Luxury Hotels at affordable prices</h1>
+        <h2 style="text-shadow: 1px 1px rgb(51, 51, 51);">The promise of unique and authentic hospitality</h2>
+      </div>
+    </section>
+
+    <section id="newsletter">
+      <div class="container">
+        <h1>Login or create a new account</h1>
+
+        <form>
+          <button type="button" class="button_1" onclick="openForm()" onsubmit="return false">Login</button>
+          <button type="button" class="button_1" onclick="openRegForm()">Register</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- hidden loginform -->
+    <div class="login-popup" id="myForm">
+      <form action="./login.php" class="form-container"  method="post">
+        <h1 class="labelstyle">Login</h1>
+
+        <label for="email" class="labelstyle"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="uemail" required>
+    
+        <label for="psw" class="labelstyle"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+    
+        <button type="submit" class="btn" name="loginbtn">Login</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+    </div>
+    <div id="overlay"></div>
+    <!-- end of login form -->
+
+    <!-- hidden registrationform -->
+    <div class="registration-popup" id="myRegForm">
+      <form action="/hotelBooking/register.php" class="form-container"  method="post">
+        <h1 class="labelstyle">Sign Up</h1>
+        
+        <label for="fname" class="labelstyle"><b>First Name</b></label>
+        <input type="text" placeholder="First Name" name="fname" required>
+
+        <label for="lname" class="labelstyle"><b>Last Name</b></label>
+        <input type="text" placeholder="Last Name" name="lname" required>
+    
+        <label for="email" class="labelstyle"><b>Email</b></label>
+        <input type="text" placeholder="example123@gmail.com" name="uemail" required>
+    
+        <label for="psw" class="labelstyle"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+
+        <label for="phone" class="labelstyle"><b>Phone</b></label>
+        <input type="text" placeholder="Enter Phone no." name="phone" required>
+    
+        <button type="submit" class="btn" name="reg_user">Sign Up</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+    </div>
+    <div id="overlay"></div>
+    <!-- end of registration form -->
+
+    <section id="boxes">
+      <div class="container">
+        <div class="box">
+          <img src="./img/logo_html.png">
+          <h3>Best Food</h3>
+          <p>Our Hotels offers some of most sought-after dining experiences with internationally recognized standards for service and cuisine. Appease your taste buds and dine in style!</p>
+          <a href="services.html">Read more...</a>
+        </div>
+        <div class="box">
+          <img src="./img/logo_css.png">
+          <h3>24X7 Support</h3>
+          <p>Our Hotels and Resorts are renowned for the luxury experience they provide to their guests and you can rest assured that we will do our utmost to ensure your well-being and safety.</p>
+          <a href="services.html">Read more...</a>
+        </div>
+        <div class="box">
+          <img src="./img/logo_brush.png">
+          <h3>Other Services</h3>
+          <p>Offering indoor/outdoor pool, hi-speed wi-fi, fitness centers, cafes and many other amenities.</p>
+          <a href="services.html">Read more...</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Hotel Booking, Copyright &copy; 2019</p>
+    </footer>
+
+    <script>
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
+        document.getElementById("overlay").style.display = "block";
+      }
+
+      function openRegForm() {
+        document.getElementById("myRegForm").style.display = "block";
+        document.getElementById("overlay").style.display = "block";
+      }
+      
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+        document.getElementById("myRegForm").style.display = "none";
+        document.getElementById("overlay").style.display = "none";
+      }
+      </script>
+  </body>
+</html>
